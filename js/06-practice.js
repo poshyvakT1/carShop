@@ -60,7 +60,7 @@ const cars = [
       car: "Toyota",
       type: "land cruiser 200",
       price: 45800,
-      img: "http://salut.cars.ua/img/upload/cache/aoe-1_q-85_h-1200_w-1800_5f68c6d358c1c2_89313576.jpg",
+      img: "http://elite.cars.ua/img/upload/cache/aoe-1_q-85_h-1200_w-1800_5c729fc952b986_84132507.jpg",
     },
     {
       id: 10,
