@@ -107,20 +107,42 @@ input {
 .car-image {
   width: 300px;
   height: 200px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .car-title {
   font-size: 24px;
   color: #333;
+  margin-top: 0;
   margin-bottom: 5px;
 }
 
 .car-type {
   font-size: 18px;
   color: #666;
+  margin-top: 0;
   margin-bottom: 5px;
 }
+
+.car-mileage{
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.car-capacity{
+  font-size: 18px;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.car-fuel{
+  font-size: 18px;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
 
 .car-price {
   font-size: 20px;
