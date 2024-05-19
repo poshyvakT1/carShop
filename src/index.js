@@ -5,7 +5,8 @@ var fuel_types = [];
 
 document.addEventListener('DOMContentLoaded', async () => {
   const response = await fetch('https://poshyvakt1.github.io/carShop.github.io/response.json')
-  cars = await response.json();
+  const response_json = await response.json();
+  cars = response_json.cars;
   const form = document.querySelector(".js-form");
   const container = document.querySelector(".js-list");
 
@@ -39,7 +40,7 @@ function createMarkup(arr) {
   var array_models = []
   var array_fuel_types = []
 
-  const list = arr.cars.map(item => {
+  const list = arr.map(item => {
     array_makes.push(item.car);
     array_models.push(item.type);
     array_fuel_types.push(item.fuel);
