@@ -39,7 +39,7 @@ function createMarkup(arr) {
   var array_models = []
   var array_fuel_types = []
 
-  const list = arr.map(item => {
+  const list = arr.cars.map(item => {
     array_makes.push(item.car);
     array_models.push(item.type);
     array_fuel_types.push(item.fuel);
