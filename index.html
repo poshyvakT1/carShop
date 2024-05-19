@@ -3,13 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>car-shop</title>
-    <link rel="stylesheet" href="./style.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Search</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <ul>
-      <li><a href="./03-forms.html">Подія сабміту форми</a></li>
-      <li><a href="./06-practice.html">Майстерня: пошук</a></li>
-    </ul>
+    <header>
+      <nav>
+        <div class="menu-icon" id="menu-icon">☰</div>
+        <img id="logo" src="./resources/logo.png" width="100" height="60"/>TURBO
+        <ul id="menu">
+            <li><span class="fa fa-child"></span>&nbsp; <a href="#">About Us</a></li>
+            <li><span class="fa fa-wrench"></span>&nbsp; <a href="#">Services</a></li>
+            <li><span class="fa fa-vcard"></span>&nbsp; <a href="#">Portfolio</a></li>
+            <li><span class="fa fa-user-circle-o"></span>&nbsp; <a href="#">Contact</a></li>
+        </ul>
+        <button type="submit" class="car-button add-car" id="add-car-button">+ Добавити Оголошення</button>
+      </nav>
+    </header>
+    <form class="js-form car-search">
+      <div class="car-group">
+        <select name="options" class="car-select" id="makes-select">
+          
+        </select>
+        <select name="options" class="car-select" id="models-select">
+         
+        </select>
+      </div>
+        <div class="car-group">
+          <input type="text" name="query" class="car-input" placeholder="Пробіг" id="mileage"/>
+          <input type="text" name="query" class="car-input" placeholder="Обєм двигуна" id="engine_volume"/>
+        </div>
+        <div class="car-group">
+          <select name="options" class="car-select" id="fuel-types-select">
+            
+          </select>
+        </div>
+
+        <button type="submit" class="car-button">Пошук</button>
+      </div>
+    </form>
+
+    <ul class="js-list car-list"></ul>
+    <div id="add-car-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        
+        <form class="js-form add-car-form">
+          <h2>Добавити Оголошення</h2>
+          <div class="car-group">
+            <select name="options" class="car-select" id="makes-select">
+              
+            </select>
+            <select name="options" class="car-select" id="models-select">
+            
+            </select>
+          </div>
+            <div class="car-group">
+              <input type="text" name="query" class="car-input" placeholder="Пробіг" id="mileage"/>
+              <input type="text" name="query" class="car-input" placeholder="Обєм двигуна" id="engine_volume"/>
+            </div>
+            <div class="car-group">
+              <select name="options" class="car-select" id="fuel-types-select">
+                
+              </select>
+            </div>
+    
+            <button type="submit" class="car-button">Добавити</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./src/index.js"></script>
+    <script src="./src/modal.js"></script>
   </body>
 </html>
