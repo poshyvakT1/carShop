@@ -4,7 +4,7 @@ var models = [];
 var fuel_types = [];
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const response = await fetch('https://poshyvakt1.github.io/carShop.github.io/carShop.github.io/response.json')
+  const response = await fetch('https://poshyvakt1.github.io/carShop.github.io/response.json')
   cars = await response.json();
   const form = document.querySelector(".js-form");
   const container = document.querySelector(".js-list");
