@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Rowdies';
+  src: url('./../fonts/Rowdies-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 header {
   background-color: white;
   padding: 10px 0;
@@ -9,6 +16,18 @@ header {
 
 nav {
   display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.brand-name {
+  font-family: 'Rowdies', sans-serif;
+  font-size: 18px;
 }
 
 #menu {
@@ -26,7 +45,7 @@ nav {
 
 #menu li {
   display: flex;
-  align-items: left;
+  align-items: center;
 }
 
 #menu a {
@@ -41,7 +60,44 @@ nav {
   color: black;
   display: flex;
   align-items: left;
+}
+
+#large-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: left;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+#large-menu li {
+  display: flex;
+  align-items: center;
+}
+
+#large-menu a {
+  color: black;
+  display: flex;
+  align-items: center;
   gap: 5px;
+  text-decoration: none;
+}
+
+#large-menu a {
+  color: black;
+  display: flex;
+  align-items: left;
+  gap: 5px;
+}
+
+.burger-logo-container {
+  display: flex;
+  flex-direction: row;
 }
 
 .menu-icon {
@@ -49,8 +105,8 @@ nav {
   font-size: 36px;
   cursor: pointer;
   justify-content: space-between;
-  align-items: center; /* Вирівнювання по вертикалі */
-  padding: 0 20px; /* Відступи для кращого вигляду */
+  align-items: center;
+  padding: 0 20px;
 }
 
 .add-car {
@@ -58,9 +114,45 @@ nav {
   margin-right: 20px;
 }
 
+.menu-items {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.large-only {
+  display: none;
+}
+
+.medium-only {
+  display: none;
+}
+
+@keyframes menuFadeIn {
+  from {
+      max-height: 0;
+      opacity: 0;
+  }
+  to {
+      max-height: 500px; /* достатньо велике значення для показу всіх пунктів меню */
+      opacity: 1;
+  }
+}
+
+@keyframes menuFadeOut {
+    from {
+        max-height: 500px;
+        opacity: 1;
+    }
+    to {
+        max-height: 0;
+        opacity: 0;
+    }
+}
+
 @media (max-width: 767px) {
   .menu-icon {
-      display: block;
+    display: block;
   }
 
   #menu.show {
@@ -72,23 +164,23 @@ nav {
   }
 
   .medium-only {
-      display: flex;
+    display: flex;
   }
 }
 
 @media (min-width: 768px) {
   .menu-icon {
-      display: none;
+    display: none;
   }
 
-  #menu {
-      display: flex;
-      max-height: none;
-      opacity: 1;
-      flex-direction: row;
+  #large-menu {
+    display: flex;
+    max-height: none;
+    opacity: 1;
+    flex-direction: row;
   }
 
   .large-only {
-      display: flex;
+    display: flex;
   }
 }
