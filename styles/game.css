@@ -1,0 +1,40 @@
+canvas {
+    display: block;
+    margin: 0 auto;
+    background: #f0f0f0;
+  }  
+  .game-title{
+    display: flex;
+    justify-content: center;
+  }
+  .game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+
+#retryButton {
+    display:block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #969997;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#retryButton:hover {
+    background-color: #45a049;
+}
+
+.game-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
