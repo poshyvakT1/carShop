@@ -15,32 +15,45 @@
   <body>
     <header>
       <nav>
-       
-        <img id="logo" src="./resources/logo.png" width="100" height="60"/>TURBO
-        <ul id="menu">
+        <div class="burger-logo-container">
+          <div class="menu-icon" id="menu-icon">☰</div>
+          <div class="logo-container"><img id="logo" src="./resources/logo.png" width="100" height="60"/><p class="brand-name">TURBO</p></div>
+        </div>
+        <div class="large-only">
+          <ul id="large-menu">
             <li><span class="fa fa-child"></span>&nbsp; <a href="#">About Us</a></li>
             <li><span class="fa fa-wrench"></span>&nbsp; <a href="#">Services</a></li>
             <li><span class="fa fa-vcard"></span>&nbsp; <a href="#">Portfolio</a></li>
             <li><span class="fa fa-user-circle-o"></span>&nbsp; <a href="#">Contact</a></li>
-        </ul>
+          </ul>
+        </div>
+        <div id="user"></div>
         <button type="submit" class="car-button add-car" id="add-car-button">+ Добавити Оголошення</button>
       </nav>
+      <div class="menu-items medium-only">
+        <ul id="menu">
+          <li><span class="fa fa-child"></span>&nbsp; <a href="#">About Us</a></li>
+          <li><span class="fa fa-wrench"></span>&nbsp; <a href="#">Services</a></li>
+          <li><span class="fa fa-vcard"></span>&nbsp; <a href="#">Portfolio</a></li>
+          <li><span class="fa fa-user-circle-o"></span>&nbsp; <a href="#">Contact</a></li>
+        </ul>
+      </div>
     </header>
     <form class="js-form car-search">
       <div class="car-group">
-        <select name="options" class="car-select" id="makes-select">
+        <select name="make" class="car-select" id="makes-select">
           
         </select>
-        <select name="options" class="car-select" id="models-select">
+        <select name="model" class="car-select" id="models-select">
          
         </select>
       </div>
         <div class="car-group">
-          <input type="text" name="query" class="car-input" placeholder="Пробіг" id="mileage"/>
-          <input type="text" name="query" class="car-input" placeholder="Обєм двигуна" id="engine_volume"/>
+          <input type="text" name="mileage" class="car-input" placeholder="Пробіг" id="mileage"/>
+          <input type="text" name="engine-volume" class="car-input" placeholder="Обєм двигуна" id="engine_volume"/>
         </div>
         <div class="car-group">
-          <select name="options" class="car-select" id="fuel-types-select">
+          <select name="fuel" class="car-select" id="fuel-types-select">
             
           </select>
         </div>
@@ -99,6 +112,17 @@
       </nav>
       <img id="logo" src="./resources/logo.png" width="100" height="60"/>
     </footer>
+    <div id="welcome-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        
+        <form class="js-form add-car-form">
+          <h2>nfjknkv</h2>
+          <input type="text" /> 
+          <button class="car-button">Зареєструаатись</button>
+        </form>
+      </div>
+    </div>
     <script src="./src/index.js"></script>
     <script src="./src/modal.js"></script>
     <script src="game.js"></script></div>
