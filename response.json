@@ -83,12 +83,12 @@
     {
       "id": 9,
       "car": "Toyota",
-      "type": "land cruiser 200",
+      "type": "land cruiser 300",
       "price": 45800,
       "mileage":"134000",
       "capacity":"4,4",
       "fuel": "Бензин",
-      "img": "http://elite.cars.ua/img/upload/cache/aoe-1_q-85_h-1200_w-1800_5c729fc952b986_84132507.jpg"
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/2021_Toyota_Land_Cruiser_300_3.4_ZX_%28Colombia%29_front_view_04.png/2880px-2021_Toyota_Land_Cruiser_300_3.4_ZX_%28Colombia%29_front_view_04.png"
     },
     {
       "id": 10,
