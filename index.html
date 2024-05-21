@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
     <link rel="stylesheet" href="./styles/modal.css" />
+    <link rel="stylesheet" href="./styles/game.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
@@ -91,6 +92,26 @@
         </form>
       </div>
     </div>
+    <div class="game">
+      <h2 class="game-title">Arcade Car Game</h2>
+      <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <button id="retryButton">Retry</button>
+    </div>
+
+
+    <footer class="car-footer">
+      <div class="developers">
+        <p>Софяник Дарія</p>
+        <p>Шостак Олександр</p>
+      </div>
+      <nav>
+        <ul class="contacts-list">
+          <li><span class="fa fa-user-circle-o"></span>&nbsp; <a class="footer-links" href="tel:+380969447405">Contact</a></li>
+          <li><span class="fa fa-user-circle-o"></span>&nbsp; <a class="footer-links" href="mailto:shostak.oleksandr@comp-sc.if.ua">Email</a></li>
+        </ul>
+      </nav>
+      <img id="logo" src="./resources/logo.png" width="100" height="60"/>
+    </footer>
     <div id="welcome-modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -104,5 +125,7 @@
     </div>
     <script src="./src/index.js"></script>
     <script src="./src/modal.js"></script>
+    <script src="game.js"></script></div>
+
   </body>
 </html>
