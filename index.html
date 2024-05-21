@@ -27,8 +27,10 @@
             <li><span class="fa fa-user-circle-o"></span>&nbsp; <a href="#">Contact</a></li>
           </ul>
         </div>
-        <div id="user"></div>
-        <button type="submit" class="car-button add-car" id="add-car-button">+ Добавити Оголошення</button>
+        <div class="cabinet-container">
+          <div class="user-name" id="user"></div>
+          <button type="submit" class="car-button add-car" id="add-car-button">+ Добавити Оголошення</button>
+        </div>
       </nav>
       <div class="menu-items medium-only">
         <ul id="menu">
@@ -50,7 +52,7 @@
       </div>
         <div class="car-group">
           <input type="text" name="mileage" class="car-input" placeholder="Пробіг" id="mileage"/>
-          <input type="text" name="engine-volume" class="car-input" placeholder="Обєм двигуна" id="engine_volume"/>
+          <input type="text" name="engine-volume" class="car-input" placeholder="Об`єм двигуна" id="engine_volume"/>
         </div>
         <div class="car-group">
           <select name="fuel" class="car-select" id="fuel-types-select">
@@ -95,9 +97,8 @@
     <div class="game">
       <h2 class="game-title">Arcade Car Game</h2>
       <canvas id="gameCanvas" width="800" height="600"></canvas>
-    <button id="retryButton">Retry</button>
+      <button id="retryButton">Retry</button>
     </div>
-
 
     <footer class="car-footer">
       <div class="developers">
@@ -116,16 +117,16 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         
-        <form class="js-form add-car-form">
-          <h2>nfjknkv</h2>
-          <input type="text" /> 
-          <button class="car-button">Зареєструаатись</button>
+        <form class="js-form welcome-form">
+          <h2>Welcome!</h2>
+          <input type="text" name="name" placeholder="Name"/> 
+          <button type='submit' class="car-button">Зареєструватись</button>
         </form>
       </div>
     </div>
     <script src="./src/index.js"></script>
     <script src="./src/modal.js"></script>
-    <script src="game.js"></script></div>
+    <script src="./src/game.js"></script></div>
 
   </body>
 </html>

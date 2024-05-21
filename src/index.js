@@ -8,9 +8,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const response_json = await response.json();
   cars = response_json.cars;
   const form = document.querySelector(".js-form");
+  const welcomeForm = document.querySelector(".welcome-form");
   const container = document.querySelector(".js-list");
 
   form.addEventListener("submit", handleSearch);
+  welcomeForm.addEventListener("submit", handleWelcome);
 
   container.style.display = "flex";
   container.style.flexWrap = "wrap";
@@ -23,6 +25,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const menuIcon = document.getElementById('menu-icon');
   const menu = document.getElementById('menu');
+
+  var modal = document.getElementById("welcome-modal");
+  var span = document.getElementsByClassName("close")[1];
+
+  modal.style.display = "block";  
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
 
   menuIcon.addEventListener('click', () => {
     if (menu.classList.contains('show')) {
@@ -103,12 +114,12 @@ function handleSearch(event) {
 function handleWelcome(event) {
   event.preventDefault();
 
-  let name = 'Taras'
-
+  let name = event.target.name.value;
   let user = document.getElementById('user');
+  var modal = document.getElementById("welcome-modal");
 
-  user.textContent = name;
-  
+  user.textContent = `Привіт, ${name}!`;
+  modal.style.display = "none";
 }
 
 async function createCar() {
